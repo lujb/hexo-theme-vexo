@@ -1,7 +1,7 @@
 (function ($) {
-  console.log('© Theme-Vexo | https://github.com/yanm1ng/hexo-theme-vexo')
   var app = $('.app-body')
   var header = $('.header')
+  var title = $('.header-title')
   var banner = document.getElementById('article-banner') || false
   var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
@@ -66,10 +66,13 @@
   document.addEventListener('scroll', function () {
     var scrollTop = document.documentElement.scrollTop || document.body.scrollTop
     var headerH = header.height()
+    console.log(scrollTop, headerH)
     if (banner) {
       if (scrollTop > headerH) {
+        title.show()
         header.addClass('fixed-header')
       } else if (scrollTop === 0) {
+        title.hide()
         header.removeClass('fixed-header')
       }
     }
