@@ -1,7 +1,7 @@
 (function ($) {
   var app = $('.app-body')
   var header = $('.header')
-  var title = $('.header-title')
+  var title = $('.home-link span')
   var banner = document.getElementById('article-banner') || false
   var about = document.getElementById('about-banner') || false
   var top = $('.scroll-top')
@@ -68,10 +68,10 @@
     var headerH = header.height()
     if (banner) {
       if (scrollTop > headerH) {
-        title.show()
+        title.text(title.data('ptitle'))
         header.addClass('fixed-header')
       } else if (scrollTop === 0) {
-        title.hide()
+        title.text(title.data('title'))
         header.removeClass('fixed-header')
       }
     }
