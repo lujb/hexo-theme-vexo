@@ -1,14 +1,17 @@
+// https://github.com/sofish/Typo.css
+@import "typo.css"
+
 @import "_config"
-@font-face
-  font-family: 'Source Sans Pro'
-  src: url('../fonts/SourceSansPro.ttf')
+// @font-face
+//   font-family: 'Source Sans Pro'
+//   src: url('../fonts/SourceSansPro.ttf')
 
 ::selection
   background: color-primary
   color: color-white
 
 body
-  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
+  // font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   -webkit-text-size-adjust: none
@@ -92,6 +95,7 @@ h2.article-head
 .article-head > a
   color: color-dark
   &:hover
+    text-decoration: none;
     border-bottom: 2px solid color-primary
 
 .article-date
@@ -108,6 +112,7 @@ h2.article-head
   display: inline-block
   transition: all 0.3s
   &:hover
+    text-decoration: none;
     transform: translateX(10px)
 
 #article-banner
